@@ -58,7 +58,7 @@ rhel5 ()	{
 	# Turning off httpd and removing it from services (post installation of yum enabled it but we don't need it)
 	service httpd stop && chkconfig httpd off
 	# Running function firew1
-	firew1
+	#firew1
 }
 
 # Function for RHEL 6 Linux distributions
@@ -81,7 +81,7 @@ rhel6 ()	{
 	# Restarting Squid and enabling its service
 	service squid restart && chkconfig squid on
 	# Running function firew1
-	firew1	
+	#firew1	
 }
 
 # Function for RHEL 7 Linux distributions
@@ -99,7 +99,7 @@ rhel7 ()	{
 	# Restarting Squid and enabling its service
 	systemctl restart squid.service && systemctl enable squid.service
 	# Running function firew2
-	firew2
+	#firew2
 }
 
 # Function for Debian "Squeeze" 6 and Debian "Wheezy" 7
@@ -119,7 +119,7 @@ deb ()	{
 	# Restarting Squid and enabling its service
 	service squid3 restart && update-rc.d squid3 defaults
 	# Running function firew2
-	firew2
+	#firew2
 }
 
 # Function for Debian "Jessie" 8
@@ -139,7 +139,7 @@ deb8 ()	{
 	# Restarting Squid and enabling its service
 	service squid3 restart && update-rc.d squid3 defaults
 	# Running function firew2
-	firew2
+	#firew2
 }
 
 # Function for Ubuntu
@@ -161,7 +161,7 @@ ubt ()	{
 	# Restarting Squid and enabling its service
 	service squid3 restart && update-rc.d squid3 defaults
 	# Running function firew2
-	firew2
+	#firew2
 }
 
 # Function for Fedora
@@ -184,7 +184,7 @@ fed () {
 	# Restarting Squid and enabling its service
 	systemctl restart squid && systemctl enable squid
 	# Running function firew2
-	firew2
+	#firew2
 }
 
 # Default function with information
